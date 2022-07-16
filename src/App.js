@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-import SingnUp from './SingnUp';
-import SingnIn from './SingnIn';
+import SignUp from './SignUp';
+import SignIn from './SignIn';
 import  Home from './Home';
 import {BrowserRouter} from 'react-router-dom';
 
@@ -12,8 +12,8 @@ function App() {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<SingnUp />}/>
-        <Route  path="/SignIn" element={<SingnIn />}/>
+        <Route exact path="/" element={<SignUp />}/>
+        <Route  path="/SignIn" element={<SignIn />}/>
         <Route  path="/home" element={<Home/>}/>
 </Routes>
 </BrowserRouter>
