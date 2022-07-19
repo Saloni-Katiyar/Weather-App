@@ -86,10 +86,11 @@ e.preventDefault();
   }
 
     return(
-        <div>
-<TextField id="mobile number" name="Mobilenumber" label="Mobile Number" variant="outlined" value={signIn.Mobilenumber} onChange={handleInput} helperText={errorMessage.Mobilenumber} error={!!errorMessage.Mobilenumber} />
-<TextField id="password" name="Password" type="password" label="password" variant="outlined" value={signIn.Password} onChange={handleInput} helperText={errorMessage.Password} error={!!errorMessage.Password}/>
-<button type="SignIn" onClick={handleClick}>SignIn</button>
+        <div className="container">
+            <h2>SignIn</h2><br/><br/>
+<TextField id="mobile number" name="Mobilenumber" label="Mobile Number" variant="outlined" value={signIn.Mobilenumber} onChange={handleInput} helperText={errorMessage.Mobilenumber} error={!!errorMessage.Mobilenumber} /><br/><br/>
+<TextField id="password" name="Password" type="password" label="password" variant="outlined" value={signIn.Password} onChange={handleInput} helperText={errorMessage.Password} error={!!errorMessage.Password}/><br/><br/>
+<button type="SignIn" onClick={handleClick}>SignIn</button><br/><br/>
 {loginCheck && <p style={{color:"red"}}>Mobilenumber or password not correct</p>}
 
 <p>Not a user? <Link to="/">SignUp</Link>

@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import TextField from "@material-ui/core/TextField";
 import { Link, useNavigate } from 'react-router-dom';
+import './index.css';
+
 import axios from "axios";
 
 
@@ -88,15 +90,15 @@ const[record,setRecord]=useState([]);
       }
       }
 return(
-<div>
-<TextField id="name" name="Name" label="name" variant="outlined" value={signUp.Name} onChange={handleInput} helperText={errorMessage.Name} error={!!errorMessage.Name} />
-
-<TextField id="mobile number" name="Mobilenumber" label="Mobile Number" variant="outlined" value={signUp.Mobilenumber} onChange={handleInput}  helperText={errorMessage.Mobilenumber} error={!!errorMessage.Mobilenumber}/>
-<TextField id="mobile number" name="Password" type="password" label="Password" variant="outlined" value={signUp.Password} onChange={handleInput} helperText={errorMessage.Password} error={!!errorMessage.Password}/>
-<button type="SignUp" onClick={handleClick}>SignUp</button>
+<div className="container">
+  <h2>SignUp</h2><br/>
+<TextField id="name" name="Name" label="name" variant="outlined" value={signUp.Name} onChange={handleInput} helperText={errorMessage.Name} error={!!errorMessage.Name} /><br/><br/>
+<TextField id="mobile number" name="Mobilenumber" label="Mobile Number" variant="outlined" value={signUp.Mobilenumber} onChange={handleInput}  
+helperText={errorMessage.Mobilenumber} error={!!errorMessage.Mobilenumber}/><br/><br/>
+<TextField id="mobile number" name="Password" type="password" label="Password" variant="outlined" value={signUp.Password} onChange={handleInput} helperText={errorMessage.Password} error={!!errorMessage.Password}/><br/><br/>
+<button type="SignUp" onClick={handleClick}>SignUp</button><br/><br/>
 <p>Allready a user? <Link to="/SignIn">SignIn</Link>
 </p>
-
 </div>
 );
 }
