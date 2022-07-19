@@ -11,11 +11,13 @@ function App() {
     
     <div>
       <BrowserRouter>
+      
       <Routes>
         <Route exact path="/" element={<SignUp />}/>
         <Route  path="/SignIn" element={<SignIn />}/>
         <Route  path="/home" element={<Home/>}/>
 </Routes>
+
 </BrowserRouter>
        
       {/* <SingnUp/> */}
